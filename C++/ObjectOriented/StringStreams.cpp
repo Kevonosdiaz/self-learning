@@ -13,8 +13,8 @@ int main() {
 
   stringstream ss;
   ss << "Name is: ";
-  ss << name;
-  ss << "; Age is: ";
+  ss << name << "\n";
+  ss << "Age is: ";
   ss << age;
 
   string info = ss.str();
