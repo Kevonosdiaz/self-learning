@@ -1,2 +1,9 @@
 
 C++/ObjectOriented/datamem
+C++/Memory/arrayfn
+C++/Memory/malloc
+*.gch
+C++/Namespaces/namespaces
+C++/ObjectOriented/cons
+C++/ObjectOriented/stringstreams
+*.json
