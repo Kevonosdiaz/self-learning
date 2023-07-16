@@ -1,0 +1,17 @@
+July 16, 2023
+What I did today:
+1. Neetcode video -> Approach regarding:
+    - Language to use: C++ or Python
+    - Review old solutions
+    - Max 45-60
+    - Follow a study plan/roadmap -> good order to learn DS/A in
+2. Learning about C++ vectors
+    - #include <vector> // Make sure to use namespace std, or "using std::vector"
+    - We can use the range for statement (type name : vector) to loop through all objects of <type> in our vector
+    - Dynamically allocated
+    - Some methods https://www.geeksforgeeks.org/vector-in-cpp-stl/
+3. Python
+    - Setting up python (just using PyCharm to configure a virtual environment (venv) for me)
+    - Relearning basic syntax and data types/variables
+    - https://youtu.be/rfscVS0vtbw
+    - Quick refresher on classes & objects in python

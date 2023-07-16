@@ -9,3 +9,9 @@ C++/ObjectOriented/stringstreams
 *.json
 C++/ObjectOriented/static
 C++/ObjectOriented/inhc
+*.json
+*.json
+C++/Kattis/apaxians
+# Default ignored files
+/shelf/
+/workspace.xml
