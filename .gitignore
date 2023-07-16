@@ -15,3 +15,5 @@ C++/Kattis/apaxians
 # Default ignored files
 /shelf/
 /workspace.xml
+*.xml
+*.json
