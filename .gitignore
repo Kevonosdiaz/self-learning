@@ -15,3 +15,5 @@ C++/Kattis/apaxians
 /workspace.xml
 *.xml
 *.json
+*.json
+*.iml
