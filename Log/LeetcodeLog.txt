@@ -1,0 +1,10 @@
+Resources:
+  - https://www.piratekingdom.com/leetcode/cheat-sheet
+  - https://www.piratekingdom.com/leetcode/study-guide
+  - https://neetcode.io/roadmap
+  - https://neetcode.io/practice
+
+Arrays:
+  217: Contains Duplicate
+    - Use HashSet (set() in Python3) to check for membership
+  242: Valid Anagram
