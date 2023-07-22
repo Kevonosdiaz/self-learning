@@ -1,0 +1,21 @@
+July 22, 2023
+What I did today:
+
+- Used old alarm (physical digital clock) and I was able to wake up at ~7:15PM fairly decently
+
+1. Exercise (Cycling)
+    - Today I went to explore the Copperfield area more
+    - I went past the Tim Horton's and Gas Station, and kept on the two-lane path until it merged into a single-lane path
+    - There, I found "Wetland Path", which should be a nice place to run/bike and switch things up
+
+2. Eating
+    - Ate some rice, alongside a hot dog and eggs, not bad
+
+3. Leetcode
+    - Tackled Leetcode 347: Top K Frequent Elements (integers in an array, and the k top elements to return, are passed as input)
+    - Initially thought it was easy, since a HashMap can be used to track the frequencies of each element, while iterating over the array
+    - However, getting the top K frequent elements becomes tricky, since we want to now sort by HashMap value (frequency), but return the keys, which can be done using pairs {int,int}
+    - Vectors can be used with comparator and sorting functions, but most solutions for LC347 instead use a priority queue/heap, essentially using Heapsort to track the current top element, storing it in our ans vector, and popping it off the heap to proceed with the next element
+
+Planning on reading more Deep Work, maybe Dune, and doing some TOP
+Kinda want to read CLRS on Heaps now too...
