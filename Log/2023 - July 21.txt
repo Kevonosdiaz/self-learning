@@ -1,0 +1,32 @@
+July 21, 2023
+What I did today:
+
+1. Exercise: Running with Mom and Jimmy around the default path
+
+2. Odin Project
+    - Simply added a tiny bit of CSS (actually a tiny bit, just bg color, color, font-weight, etc.)
+
+3. CPL Volunteer Application
+    - Got responses from Mrs. Grant and Si (Zhang), used Si as the reference since CPSC 449 was more recent
+    - Teen Tech Lab Guide position
+    - Details of the application have been written down (currently on Arch Desktop)
+
+4. Began reading "Deep Work" by Cal Newport
+    - Pages 1-31
+    - So far, Cal has been making the case that many of the world's successful and influential people, from Carl Jung to Bill Gates to software developers, all rely on "deep work" to generate value in their ideas, and within shorter periods of time
+    - The concept of "deep work" revolves around long periods (a few hours) of uninterrupted and distraction-free work, which is significantly more efficient than "shallow work", another concept Cal coins, which is the counterpart to deep work; shallow work is riddled with breaks and interruptions, and often gets little done while still feeling busy
+    - In the examples Cal gives, deep work is often achieved with isolation, often physically, but also digitally, from distraction
+        - Other people can serve as a distraction
+        - Networking, including email or phone calls, can also distract
+        - Apps, such as Reddit or Instagram, and social media as a whole, is a significant distraction in today's age
+    - Cal makes the point that deep work is a skill that (1) has been on the decline, with the advent of technology and easy to access communication/networking, and (2) is in demand and can allow the few who know how to use it to succeed and stand out in a world requiring top talent
+    - Cal argues that deep work can allow for entering 2 out of the 3 major groups of successful people, that being (1) "those who can work creatively with intelligent machines", and (2) "those who are stars in their field" (a.k.a. "Superstars")
+
+5. Leetcode #49: Group Anagrams
+    - Had to resort to searching a solution, since I originally used a nested loop to work with the vectors directly (strs, and also extra ones to store the result, subresults, and elements to erase), and the solution was too slow to work
+    - The solution makes use of a HashMap (unordered_map in C++), taking advantage of the fact that all anagrams of a word will share the same sorted form (since all of their component characters are the same), and uses that sorted form as a key, and all anagrams of it as the value (stored in a vector<string>)
+    - The vector.push_back(x) method was an important one to use/learn, and it simply appends an element to the end of the vector
+    - Iterators were also used, as the sort() method cannot be used as simply as sort(text) (afaik), but instead by using sort(text.begin(), text.end())
+    - HashMap iteration can be done as follows:
+        - for (auto i : map) { cout << "Key: " << i.first << " Value: " << i.second << endl; }
+        - .first and .second can be used to access the key and value respectively, for each key-value pair over the for loop
