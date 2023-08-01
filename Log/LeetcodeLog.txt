@@ -4,7 +4,6 @@ Resources:
   - https://neetcode.io/roadmap
   - https://neetcode.io/practice
 
-Arrays:
-  217: Contains Duplicate
-    - Use HashSet (set() in Python3) to check for membership
-  242: Valid Anagram
+Frequency of Objects  -> HashMap
+Top N                 -> Heap and PriorityQueue
+2D Objects            -> Consider HashMap + Set
