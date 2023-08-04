@@ -6,7 +6,7 @@
 #include <iostream>
 class Solution {
 public:
-    bool isValidSudoku(vector<vector<char>>& board) {
+    bool isValidSudoku(std::vector<std::vector<char>>& board) {
         using namespace std;
 
         unordered_map<int, set<int>> rows, cols;
