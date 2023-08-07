@@ -1,0 +1,39 @@
+July 31 - Aug 6 Weekly Report
+
+Work:
+    Leetcode:
+        - Finished Two Pointers and began Sliding Window, albeit at a slower rate (today and yesterday were replaced with Alg. Design Manual + review)
+
+    TOP (The Odin Project):
+        - Did not manage to finish the Landing Page project yet, but much progress has still been made
+        - A trip to the Seton Library or Tim's might be pretty nice
+        - Plans are to begin JS next week
+Exercise:
+    - Took a "break" for most of this week, no cycling and reduced running (still walked and ran with Mom, Jimmy, and sometimes Dad)
+    - Plans are to avoid as long of a break ever again, but max 3 days or so
+    - Exercise is pretty crucial to habit stacking and setting a routine in the morning
+
+Books:
+    - Dune is basically on halt right now
+    - The Madness of Crowds has been a good read so far (good progress too, about 80ish pages in 3 days, better than my typical pace)
+    - Some reading on The Algorithm Design Manual (Reached Data Structure section)
+    - Fully finished Deep Work this week, and took some brief notes (which I should review)
+    - Tempted to re-read or check through Atomic Habits
+    - Used Libby to start Obama's "A Promised Land" e-book
+
+Misc. and Hobbies:
+    - Played TotK for a fair bit (completed 2 temples so far)
+    - Continuing to use Niagara Launcher on the Pixel 7a, good
+    - Recycled Dad's old Note 5 (?)
+    - Experienced a potential Man-In-The-Middle attack at the Shawnessy library (?)
+    - Added PE foam to the JRIS, and it seems louder and better overall
+    - Might install the Deepin Desktop Environment (DDE) on Arch (laptop first) and try it out
+    - Also tempted to use Alacritty and theme it (with pre-made themes)
+
+
+Successes and Failures:
+    - (Good) Typical distractions for me before (incl. Reddit, manga, and gacha games excl. GT occasionally) have significantly been reduced (mainly on tablet, and only on occasion)
+    - (Bad) Should aim to reduce chances of going on YouTube tangents more (Watch Later may contain too many videos to watch)
+    - (Bad) Should also reduce time spent on Firefox and certain websites
+    - (Good) Recently cleaned up my room, as of today
+    - (Good) Spending much more time on books now, could become regular
