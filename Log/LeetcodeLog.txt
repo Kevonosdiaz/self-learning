@@ -1,9 +1,0 @@
-Resources:
-  - https://www.piratekingdom.com/leetcode/cheat-sheet
-  - https://www.piratekingdom.com/leetcode/study-guide
-  - https://neetcode.io/roadmap
-  - https://neetcode.io/practice
-
-Frequency of Objects  -> HashMap
-Top N                 -> Heap and PriorityQueue
-2D Objects            -> Consider HashMap + Set
