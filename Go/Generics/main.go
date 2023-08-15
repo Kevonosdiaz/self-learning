@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // Follows this tutorial: https://go.dev/doc/tutorial/generics
-
+// https://go.dev/ref/spec#Predeclared_identifiers - Contains more information
 type Number interface {
 	int64 | float64
 }
