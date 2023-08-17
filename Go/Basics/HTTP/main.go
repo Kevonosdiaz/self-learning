@@ -9,7 +9,6 @@ import (
 
 type logWriter struct{}
 
-
 func main() {
 	resp, err := http.Get("http://google.com")
 	if err != nil {
