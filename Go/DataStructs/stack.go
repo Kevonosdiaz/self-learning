@@ -1,24 +1,24 @@
 package main
 
-type stack []any // This stack is implemented using a generic slice
+type Stack []any // This stack is implemented using a generic slice
 
-func (s *stack) push(val any) {
+func (s *Stack) Push(val any) {
 	*s = append(*s, val)
 }
 
-func (s *stack) pop() {
+func (s *Stack) Pop() {
 	*s = (*s)[:len(*s)-1]
 }
 
-func (s *stack) top() any {
+func (s *Stack) Top() any {
 	return (*s)[len(*s)-1]
 }
 
-func (s *stack) isEmpty() bool {
+func (s *Stack) IsEmpty() bool {
 	return len(*s) == 0
 }
 
-func (s *stack) size() int {
+func (s *Stack) Size() int {
 	return len(*s)
 }
 
