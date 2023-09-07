@@ -1,6 +1,5 @@
 // LC143: Reorder List
 
-
 // Definition for singly-linked list.
 struct ListNode {
 	int val;
@@ -14,9 +13,41 @@ class Solution {
 	public:
 		// Reorder so that it goes L0 -> Ln -> L1 -> L(n-1) ... until they meet
 		void reorderList(ListNode* head) {
-			// Since we have a singly-linked list we can't use two pointers and alternate them directly
-			// We could use an external DS such as an array, vector, or stack to arrange the nodes
-			// We need to have the second nodes always be the nth nodes, so depending on if n is even
-			// or odd, we may want all even or all odd nodes stored together (?)o
+			if (!head || !head->next) {
+				return; // Already in correct ordering
+			}
+			// Use fast & slow ptr method to get the middle
+			ListNode* slow = head;
+			ListNode* fast = head->next;
+			
+			while (fast && fast->next) {
+				slow = slow->next;
+				fast = fast->next->next;
+			}
+			
+			ListNode* second = slow->next;
+			slow->next = nullptr; // end of the final list
+			ListNode* prev = nullptr;
+
+			// Reverse the second half
+			while (second) {
+				ListNode* tmp = second->next;
+				second->next = prev;
+				prev = second;
+				second = tmp;
+			}
+
+			// Merge the halves together
+			ListNode* first = head;
+			second = prev;
+			while (second) {
+				ListNode* tmp1 = first->next;
+				ListNode* tmp2 = second->next;
+				first->next = second;
+				second->next = tmp1;
+				first = tmp1, second = tmp2;
+			}
 		}
-}
+};
+
+
