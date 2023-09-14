@@ -12,102 +12,36 @@ struct ListNode {
   ListNode(int x) : val(x), next(nullptr) {}
   ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+
 class Solution {
 public:
   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
-    // Idea 1: Reverse each list and read their numbers and generate a new LL
-    l1 = reverse(l1);
-    l2 = reverse(l2);
-    std::vector<int> nums;
+    ListNode dummyHead = ListNode(0);
+    ListNode *tail = &dummyHead;
+    bool carry = 0;
 
-    // Add the sum of the linked lists and store in nums
-    while (l1) {
-      int sum = l1->val + l2->val;
-      nums.push_back(sum);
-      l1 = l1->next;
-      l2 = l2->next;
-    }
+    while (l1 || l2 || carry != 0) {
+      // Perform addition
+      int digit1 = l1 ? l1->val : 0;
+      int digit2 = l2 ? l2->val : 0;
 
-    ListNode *dummy;
-    ListNode *tail = dummy;
-    // Iterate through nums and generate a new LL
-    for (int i = 0; i < nums.size(); i++) {
-      ListNode *node = new ListNode{nums[i], nullptr};
-      node->next = tail->next;
+      int sum = digit1 + digit2 + carry;
+
+      // Determine which number (0-9) to store at node
+      int num = sum % 10;
+      carry = sum / 10;
+
+      // Construct new node and append it
+      ListNode *node = new ListNode(num);
       tail->next = node;
-      tail = node->next;
+      tail = tail->next;
+
+      // Update pointers
+      if (l1)
+        l1 = l1->next;
+      if (l2)
+        l2 = l2->next;
     }
-
-    // This should return the head of the new list
-    return dummy->next;
-  }
-
-  ListNode *reverse(ListNode *head) {
-    ListNode *prev;
-    ListNode *next;
-    while (head) {
-      next = head->next;
-      head->next = prev;
-      prev = head;
-      head = next;
-    }
-
-    return prev;
-  }
-};
-
-// Newer version with small changes done on leetcode web
-
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-  ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
-    // Idea 1: Reverse each list and read their numbers and generate a new LL
-    l1 = reverse(l1);
-    l2 = reverse(l2);
-    std::vector<int> nums;
-
-    // Add the sum of the linked lists and store in nums
-    while (l1) {
-      int sum = l1->val + l2->val;
-      nums.push_back(sum);
-      l1 = l1->next;
-      l2 = l2->next;
-    }
-
-    ListNode *dummy;
-    ListNode *tail = dummy;
-    // Iterate through nums and generate a new LL
-    for (int i = 0; i < nums.size(); i++) {
-      ListNode *node = new ListNode{nums[i], nullptr};
-      node->next = tail->next;
-      tail->next = node;
-      tail = node->next;
-    }
-
-    // This should return the head of the new list
-    return dummy->next;
-  }
-
-  ListNode *reverse(ListNode *head) {
-    ListNode *prev = nullptr;
-    ListNode *next;
-    while (head) {
-      next = head->next;
-      head->next = prev;
-      prev = head;
-      head = next;
-    }
-
-    return prev;
+    return dummyHead.next;
   }
 };
