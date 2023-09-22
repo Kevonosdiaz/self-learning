@@ -1,30 +1,30 @@
 #include <iostream>
 #include <unordered_map>
-// Incomplete solution
+
 int main() {
     using namespace std;
-    int n, divisor;
+    int n, divisor, res = 0;
 
     // Parse the first line of input
     cin >> n;
     cin >> divisor;
 
-    // Use a hashmap with the key being the quotient and the value being the numerator
-    unordered_map<int, int> seen;
-    int curr;
-
-    // Everytime we have a collision (of keys), increment res
-    int res = 0;
+    // Populate array with second line of input
+    int arr[n];
     for (int i = 0; i < n; i++) {
-        cin >> curr;
-        int quo = curr/divisor;
-        if (seen.find(quo) == seen.end()) {
-            // If not found, add it
-            seen[curr] = quo;
-        } else {
-            res++;
+        cin >> arr[i];
+    }
+
+    // Natural idea: Check pairs between index i and every index j coming after it
+    // Is this sufficiently fast though?
+    for (int i = 0; i < n; i++) {
+        int quo1 = arr[i]/divisor;
+        for (int j = i+1; j < n; j++) {
+            int quo2 = arr[j]/divisor;
+            res += (quo1 == quo2);
         }
     }
+
     cout << res;
     return 0;
 }
