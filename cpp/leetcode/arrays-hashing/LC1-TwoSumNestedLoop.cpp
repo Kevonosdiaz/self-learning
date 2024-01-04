@@ -12,7 +12,7 @@ public:
         - Ignore the first i entries in the array, since they did not produce the solution
         - i loop keeps track of the first number, while the j loop checks every index > i 
         for a potential solution when added to i
-        - Should be better than the brute force answer, but still > O(n)
+        - Should be better than the brute force answer, but still > O(n) (it's n^2)
         */
         int size = nums.size();
         for (int i = 0; i < size; i++) {
