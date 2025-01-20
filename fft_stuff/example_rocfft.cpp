@@ -19,7 +19,7 @@ int main()
     }
 
     rocfft_setup();
-    size_t  N         = 4;
+    size_t  N         = cx.size();
     size_t  num_bytes = N * sizeof(float2);
     float2* x;
     hipMalloc(&x, num_bytes);
