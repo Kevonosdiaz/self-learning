@@ -10,4 +10,5 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(rocfft_call example_rocfft.cpp)
 add_executable(recursive_example fft.cpp)
+add_executable(gen_random_complex random.cpp)
 target_link_libraries(rocfft_call hip::device hip::host roc::rocfft)
