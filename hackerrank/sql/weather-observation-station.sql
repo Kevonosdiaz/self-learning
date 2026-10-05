@@ -57,3 +57,9 @@ FROM STATION AS s
 WHERE LEFT(s.CITY, 1) REGEXP '[^aeiou]' 
     AND RIGHT(s.CITY, 1) REGEXP '[^aeiou]';
 
+-- 15
+SELECT ROUND(s.LONG_W, 4)
+FROM STATION AS s
+WHERE s.LAT_N = (SELECT MAX(s2.LAT_N)
+                 FROM STATION AS s2
+                 WHERE s2.LAT_N < 137.2345);
