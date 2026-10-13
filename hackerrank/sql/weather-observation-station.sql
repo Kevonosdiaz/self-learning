@@ -63,3 +63,18 @@ FROM STATION AS s
 WHERE s.LAT_N = (SELECT MAX(s2.LAT_N)
                  FROM STATION AS s2
                  WHERE s2.LAT_N < 137.2345);
+
+-- 18
+-- Manhattan distance
+SELECT ROUND(ABS(MIN(s.LAT_N) - MAX(s.LAT_N)) + ABS(MIN(s.LONG_W) - MAX(s.LONG_W)), 4)
+FROM STATION AS s;
+
+-- 19
+-- Euclidean distance
+SELECT TRUNCATE(
+    SQRT(POW(MIN(s.LAT_N) - MAX(s.LAT_N), 2) 
+         + 
+         POW(MIN(s.LONG_W) - MAX(s.LONG_W), 2)
+        )
+    , 4)
+FROM STATION AS s;
